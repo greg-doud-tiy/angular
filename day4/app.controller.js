@@ -1,4 +1,4 @@
-angular.module("AppMod")
+appMod
 
 	.controller("AppCtrl", ['$http', '$routeParams', function($http, $routeParams) {
 		var self = this;

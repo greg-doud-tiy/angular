@@ -1,4 +1,4 @@
-angular.module("AppMod")
+appMod
 
 	.config(['$routeProvider', function($routeProvider) {
 
