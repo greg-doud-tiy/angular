@@ -48,23 +48,7 @@ appMod
 		};
 
 		self.addStudent = function(id, firstName, lastName, sat, gpa) {
-			$("#loading").dialog('open').html("<p>Please Wait...</p>");
-			var stud = {};
-			stud.id = id;
-			stud.first_name = firstName;
-			stud.last_name = lastName;
-			stud.sat = sat;
-			stud.gpa = gpa;
-			console.log(stud);
-			$http.post('http://localhost:8080/student', stud)
-				.then(function(resp){
-					console.log('SUCCESS:', resp);
-					$('#loading').html("<p>Result Complete...</p>");
-
-					//$location.path('/student');
-				},function(err) {
-					console.log('FAILURE:', resp);
-				});
+			self.addupdStudent('add', id, firstName, lastName, sat, gpa)
 		};
 
 		self.updateStudent = function(id, firstName, lastName, sat, gpa) {
